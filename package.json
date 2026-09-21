@@ -1,15 +1,20 @@
 {
   "name": "qvac-local-ai-assistant",
   "version": "1.0.0",
-  "description": "",
+  "description": "Offline Hindi-English Translator using Tether QVAC SDK",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "qvac",
+    "local-ai",
+    "translator",
+    "edge-ai"
+  ],
+  "author": "Aryan",
+  "license": "MIT",
   "dependencies": {
     "@qvac/sdk": "^0.19.1"
   }
