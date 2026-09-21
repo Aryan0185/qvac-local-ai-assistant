@@ -1,20 +1,28 @@
-# Local AI Assistant (QVAC SDK)
+# Offline Hindi-English Translator (QVAC SDK)
 
-A lightweight on-device AI app built with Tether QVAC SDK (@qvac/sdk) for private offline text generation.
+An interactive, offline Hindi-English translation tool running 100% locally on-device using Tether's QVAC SDK. Zero cloud calls, zero external API keys.
+
+## Features
+- Interactive terminal input loop
+- Real-time bidirectional Hindi-English translations
+- Completely offline execution on local CPU
 
 ## Requirements
 - Node.js >= 18
-- @qvac/sdk (v0.19.0+)
+- @qvac/sdk (0.19.1)
+
+## Functions Called
+- loadModel
+- completion
+- unloadModel
 
 ## Installation
-```bash
 npm install
-```
 
 ## Running the App
-```bash
 node index.js
-```
+
+Type any sentence in Hindi or English, and receive real-time offline translation. Type exit to quit.
 
 ## License
 MIT
