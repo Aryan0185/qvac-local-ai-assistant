@@ -25,7 +25,8 @@ async function main() {
   });
 
   console.log("Offline Hindi-English translator ready.");
-  console.log("Type a sentence. Type exit to quit.\n");
+  console.log("QVAC SDK 0.19.1 on CPU. Calls: loadModel, completion, unloadModel.");
+  console.log("Type Hindi or English. Type help or exit.\n");
 
   const rl = readline.createInterface({ input, output });
 
@@ -33,7 +34,11 @@ async function main() {
     while (true) {
       const text = (await rl.question("Text: ")).trim();
       if (!text) continue;
-      if (text.toLowerCase() === "exit") break;
+      if (text.toLowerCase() === "exit" || text.toLowerCase() === "quit") break;
+      if (text.toLowerCase() === "help") {
+        console.log("Type Hindi or English. The app translates offline using QVAC loadModel + completion.");
+        continue;
+      }
 
       const result = completion({
         modelId,
@@ -65,4 +70,3 @@ main().catch((err) => {
   console.error("Fatal error:", err);
   process.exit(1);
 });
-
